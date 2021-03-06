@@ -1,0 +1,172 @@
+@media all and (min-width: 2000px) {
+    
+    .overviewHeader {
+        font-size: 50px;
+    }
+    
+    .indexHeader {
+        font-size: 40px;
+    }
+    
+    .indexDescription {
+        font-size: 30px;
+    }
+    
+    .socialContentContainer {
+        width: 80%;
+    }
+    
+    .descriptionText {
+        font-size: 30px;
+    }
+    
+    .timelineDescriptionContainer {
+        width: 23%;
+    }
+    
+    .indicationTop {
+        font-size: 20px;
+    }
+    
+    .indication {
+        font-size: 20px;
+    }
+    
+    .explanation {
+        font-size: 25px;
+    }
+    
+    .nextProject {
+        font-size: 25px;
+    }
+    
+    .projectName {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width: 1800px) {
+    
+    .displayMenu {
+        font-size: 25px;
+    }
+    
+    .header1 {
+        font-size: 70px;
+    }
+    
+}
+
+
+@media all and (max-width: 1440px) {
+    
+    .header1 {
+        font-size: 50px;
+    }
+    
+    .copyrightText {
+        font-size: 15px;
+    }
+    
+    #toTopButton {
+        right: 35px;
+    }    .
+}
+
+
+@media all and (max-width: 1100px) {
+    
+    .connectContainerMain {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .connectContainer {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .socialContentContainer {
+        width: 100%;
+        justify-content: center;
+        padding-top: 5%;
+    }
+}
+
+
+@media all and (max-width: 900px) {
+    
+    .navBar {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        z-index: 5;
+    }
+    
+    .containerMain {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 40vh;
+    }
+    
+    .title {
+        grid-column: 1/4;
+        justify-self: center;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    .contentContainer {
+        display: block;
+    }
+    
+    .contentBackground {
+        margin-top: -3rem;
+    
+}
+
+@media all and (max-width: 750px) {
+
+    .title {
+        grid-column: 2;
+    }
+    
+    .overviewHeader {
+        font-size: 35px;
+    }
+    
+    .indexHeader {
+        font-size: 25px; 
+    }
+}
+
+
+@media all and (max-width: 600px) {
+    
+    .picContainer {
+        min-width: 300px;
+    }
+    
+    .navBar h2 {
+        font-size: 16px;
+        margin-top: 1.2em;
+    }
+    
+    .header1 {
+        font-size: 35px;
+    }
+    
+    .overviewHeader {
+        font-size: 30px;
+    }
+    
+    .indexHeader {
+        font-size: 20px; 
+    }
+    .indexDescription {
+        font-size: 15px;
+    }
+}
+
+

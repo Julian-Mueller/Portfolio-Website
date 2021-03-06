@@ -1,0 +1,546 @@
+/*General*/
+
+body {
+    background-color: #222222;
+}
+
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+@font-face {
+    font-family: Photograph Signature;
+    src: url(Photograph-Signature.woff);
+}
+
+@font-face {
+    font-family: GRIFTER;
+    src: url(GRIFTER.woff);
+}
+
+
+
+/*Overlay Menu*/
+
+/*
+These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+*/
+
+.overlayMenu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #1D1D1D;
+    opacity: 90%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 0;
+}
+
+.overlayMenu .closeButton {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 50px;
+    color: ghostwhite;
+}
+
+.closeButton:hover {
+    color: coral;
+}
+
+.menuLinks {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.menuLinks a {
+    padding: 0.5%;
+    font-size: 40px;
+    color:  ghostwhite;
+    display: block;
+    font-family: GRIFTER, sans-serif;
+}
+
+.menuLinks a:hover {
+    color: coral;
+}
+
+/*End*/
+
+
+
+
+
+/*Main Section*/
+
+.containerMain {
+    display: grid;
+    height: 50vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+
+/*Title*/
+
+.title {
+    grid-column: 3/9;
+    grid-row: 3;
+}
+
+.header1 {
+    font-family: GRIFTER, sans-serif;
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 80px;
+    margin-bottom: 0%;
+}
+
+
+
+/*Menu bar at the right side*/
+
+.menu {
+    grid-column: 11;
+    grid-row: 1/7;
+    justify-self: center;
+}
+
+.rightBarTop {
+    height: 30%;
+    background: coral;
+}
+
+.menuBox {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+
+}
+
+.displayMenu {
+    font-family: McLaren, sans-serif;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    font-size: 35px;
+    color: ghostwhite;
+    margin: 0%;
+    cursor: pointer;
+}
+
+.displayMenu:hover {
+    color: coral;
+}
+
+.rightBarBottom {
+    grid-row: 6/7;
+    height: 40%;
+    background-color: coral;
+}
+
+
+/*Alternative Menu*/
+
+.navBar {
+    display: none;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    background-color: coral;
+    font-family: Avenir, sans-serif;
+    font-weight: bold;
+    color: #222222;
+}
+
+.navBar h2 {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.navBar h2:hover {
+    color: ghostwhite;
+    cursor: pointer;
+}
+
+
+
+/*Scroll to top button*/
+
+/*
+These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+I adjusted the button for my website 
+*/
+
+#toTopButton {
+    display: none;
+    bottom: 70px;
+    right: 70px;
+    position: fixed;
+    z-index: 2;
+    background-color: coral;
+    border: none;
+    color: aliceblue;
+    padding: 15px;
+    transform: rotate(45deg);
+    opacity: 65%;
+}
+
+#arrow {
+    transform: rotate(-135deg)
+}
+
+#toTopButton:hover {
+    background-color: #EEAD94;
+}
+
+/*End*/
+
+
+
+
+
+/*Content*/
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.contentBackground {
+    grid-column: 2/12;
+        background-color: #222222;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    box-shadow: 1px 15px 70px #000000;
+/*    margin-top: -35rem;*/
+}
+
+
+/*Overview*/
+
+.overview {
+    display: flex;
+    justify-content: center;
+}
+
+.overviewContainerMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+.overviewContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    box-shadow: 0px 5px 55px #191919;
+    background-color: #222222;
+    padding: 1.5em;
+}
+
+.overviewHeader {
+    font-family: Avenir, sans-serif;
+    font-size: 40px;
+    width: 100%;
+    margin: 0.5em;
+    margin-left: 1em;
+    margin-bottom: 0;
+    color: ghostwhite;
+}
+
+.overviewContentContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.index {
+    width: 25%;
+    height: 100%;
+    font-family: Avenir, sans-serif;
+    color: lightgray;
+}
+
+.indexHeader {
+    font-size: 30px;
+}
+
+.indexDescription {
+    font-size: 20px;
+    margin-bottom: 2em;
+    font-weight: normal;
+}
+
+
+
+/*Description*/
+
+.desciption {
+    display: flex;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.descriptionContainerMain {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.descriptionContainer {
+    width: 80%;
+    height: 100%;
+}
+
+.descriptionText {
+    font-family: Avenir, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: lightgray;
+}
+
+
+
+/*Divider*/
+
+.divider {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+.line {
+    width: 80%;
+    height: 5px;
+    background-color: ghostwhite;
+    opacity: 10%;
+}
+
+
+
+/*Project Pictures and Screenshots*/
+
+/*
+These lines of code below are for the slideshow to display pictures and screenshots from the project, the original code of the slideshow is from https://www.w3schools.com/howto/howto_js_slideshow.asp
+It was very difficult to implement this slideshow into my website and I took me a long time understanding the JS code. I adjusted the slideshow to my liking and fixed the image scaling. 
+*/
+
+
+.picturesContainerMain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.picContainer {
+    max-width: 50%;
+    min-width: 400px;
+    position: relative;
+}
+
+.slides {
+    display: none;
+}
+
+.imgDescription {
+    color: white;
+    background-color: black;
+    opacity: 80%;
+    text-align: center;
+    position: relative;
+    font-family: Avenir, sans-serif;
+}
+
+.previous, .next {
+    width: auto;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 0.5em;
+    background-color: black;
+    cursor: pointer;
+    position: absolute;
+    opacity: 60%;
+    margin-top: -35%;
+}
+
+.next {
+    right: 0;
+}
+
+.previous:hover, .next:hover {
+    background-color: dimgray;
+}
+
+/*End*/
+
+
+
+
+/*Details*/
+
+.detailContainerMain {
+    display: flex;
+    width: 100%;
+    padding-bottom: 5em;
+}
+
+.detailContainer {
+    display: flex;
+    width: 100%;
+    height: 450px;
+}
+
+.timelineContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    line-height: 1em;
+}
+
+.timeline {
+    width: 5px;
+    background-color: coral;
+}
+
+.timelineDescriptionContainer {
+    width: 13%;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1em;
+}
+
+.indicationTop {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 0%;
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    color: lightgray;
+}
+
+.indication {
+    color: lightgray;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-bottom: 0%;
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+}
+
+
+
+.explanationContainer {
+    width: 50%;
+    height: 100%;
+    box-shadow: 0px 5px 55px #191919;
+    background-color: #2F2F2F2F;
+    overflow: scroll;
+}
+
+.explanation {
+    padding: 5%;
+    font-family: Roboto, sans-serif;
+    font-size: 1.2em;
+    color: lightgray;
+    margin: 0.5%;
+}
+
+
+
+
+/*Other Projects*/
+
+.otherProjects {
+    display: flex;
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.otherProjectsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.goBackContainer {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.nextContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.nextTitle {
+    width: 100%;
+    color: coral;
+}
+
+.anotherProject {
+    text-align: center;
+    font-family: GRIFTER, sans-serif;
+    margin-bottom: 0;
+}
+
+.projectNameContainer {
+    width: 100%;
+    height: 50%;
+}
+
+.projectName {
+    text-align: center;
+    margin: 0%;
+    font-family: AVENIR, sans-serif;
+    color: ghostwhite;
+}
+
+h4.projectName:hover {
+    color: coral;
+}
+
+
+
+
+
+/*Footer*/
+
+.footerContainer {
+    grid-column: 2/12;
+    background-color: #222222;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+}
+
+.copyrightText {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: dimgray;
+}

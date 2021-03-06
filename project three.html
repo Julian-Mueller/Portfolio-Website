@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rijksstudio - JKM Portfolio</title>
+        <link rel="stylesheet" href="CSS/project%20three.css">
+        <link rel="stylesheet" href="Responsive/responsive%20project%20three.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+        I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+
+        *although this menu provides navigation, the <nav> element is not applicable here, because it is not meant to stick to the top* 
+        -->
+        <div id="showHide" class="overlayMenu">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="menuLinks">
+                <a href="index.html">HOME</a>
+                <a href="aboutme.html" onclick="closeMenu()">ABOUT ME</a>
+                <a href="index.html#contact" onclick="closeMenu()">CONTACT</a>
+            </div>
+        </div>
+        <script>
+            function openMenu () {
+                    document.getElementById("showHide").style.height = "100%";
+                }
+                                        
+            function closeMenu () {
+                    document.getElementById("showHide").style.height = "0%";
+                }
+        </script>
+        <!--End-->
+        <div class="navBar">
+            <h2><a href="index.html">HOME</a></h2>
+            <h2><a href="aboutme.html">ABOUT ME</a></h2>
+            <h2><a href="index.html#contact">CONTACT</a></h2>
+        </div>
+        <div class="containerMain">
+            <div class="title">
+                <h2 class="header1">RIJKSSTUDIO</h2>      
+            </div>
+            <div class="menu">
+                <div class="rightBarTop"></div>
+                <div class="menuBox">
+                    <p class="displayMenu"><span onclick="openMenu()">MENU</span></p>
+                </div>
+                <div class="rightBarBottom"></div>
+            </div>
+        </div>
+        <!--
+        These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        I adjusted the button for my website 
+        -->  
+        <button id="toTopButton" onclick="scrollUp()"><div id="arrow">&#10132;</div></button>
+        <script>
+            ttButton = document.getElementById("toTopButton");
+
+            window.onscroll = function() {checkScrolling()};
+
+            function checkScrolling() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 ttButton.style.display = "block";
+                } else {
+                    ttButton.style.display = "none";
+                }
+            }
+
+            function scrollUp() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!--End-->
+        <section class="contentContainer">
+            <div class="contentBackground">
+                <section class="overview">
+                    <div class="overviewContainerMain">
+                        <div class="overviewContainer">
+                            <header>
+                                <h1 class="overviewHeader">OVERVIEW</h1>
+                            </header>
+                            <div class="overviewContentContainer">
+                                <div class="index">
+                                    <h4 class="indexHeader">FIELD</h4>
+                                    <h5 class="indexDescription">User Testing</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TYPE</h4>
+                                    <h5 class="indexDescription">School Project</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TEAM</h4>
+                                    <h5 class="indexDescription">Quintet</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">DURATION</h4>
+                                    <h5 class="indexDescription">6 Weeks</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="desciption">
+                    <div class="descriptionContainerMain">
+                        <div class="descriptionContainer">
+                            <p class="descriptionText">A user trailing focused on the Rijksstudio website. Together in a group of 5 we conducted usability testing on the of the digital collection of the dutch Rijksmuseum.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider">
+                    <div class="line"></div>
+                </div>
+                <!--
+                These lines of code below are for the slideshow to display pictures and screenshots from the project, the original code of the slideshow is from https://www.w3schools.com/howto/howto_js_slideshow.asp
+                It was very difficult to implement this slideshow into my website and I took me a long time understanding the JS code. I adjusted the slideshow to my liking and fixed the image scaling. 
+                -->  
+                <section class="projectPictures">
+                    <div class="picturesContainerMain">
+                        <div class="picContainer">
+                            <div class="slides">
+                                <img src="images/sitemap.png" style="width: 100%">
+                                <div class="imgDescription">Detailed Sitemap of the Rijksstudio</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/interaction.png" style="width: 100%">
+                                <div class="imgDescription">Interaction possibilities</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/researchquestions.png" style="width: 100%">
+                                <div class="imgDescription">Research questions</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/tasks.png" style="width: 100%">
+                                <div class="imgDescription">Tasks</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/protocol.png" style="width: 100%">
+                                <div class="imgDescription">Exerpt of the Protocol</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/transcriptUT.png" style="width: 100%">
+                                <div class="imgDescription">Protocol of the Video Recording</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/overviewAnalysis.png" style="width: 100%">
+                                <div class="imgDescription">Overview and analysis of the data</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/recommendations.png" style="width: 100%">
+                                <div class="imgDescription">Recommendations</div>
+                            </div>      
+                            <a class="previous" onclick="nSlide(-1)">&#8592;</a>
+                            <a class="next {" onclick="nSlide(1)">&#8594;</a>
+                        </div>
+                    </div>
+                <script>
+                    var index = 1;
+                    show(index);
+                    
+                    function nSlide(n) {
+                        show(index += n);
+                    }
+                    
+                    function show(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("slides");
+                        
+                        if (n > slides.length) {
+                            index = 1
+                        }
+                        if (n < 1) {
+                            index = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slides[index-1].style.display = "block";
+                    }
+                </script>
+                </section>
+                <!--End-->
+                <section class="details">
+                    <div class="detailContainerMain">
+                        <div class="detailContainer">
+                            <div class="timelineContainer">
+                                <div class="timeline"></div>
+                                <div class="timelineDescriptionContainer">
+                                    <h5 class="indicationTop">Research</h5>
+                                    <h5 class="indication">Sitemap</h5>
+                                    <h5 class="indication">Assumptions</h5>
+                                    <h5 class="indication">Research Questions</h5>
+                                    <h5 class="indication">Research Setup</h5>
+                                    <h5 class="indication">Testing Protocol</h5>
+                                    <h5 class="indication">Data collection and processing</h5>
+                                    <h5 class="indication">Analysis</h5>
+                                    <h5 class="indication">Answering research questions</h5>
+                                    <h5 class="indication">Recommendations</h5>
+                                </div>
+                            </div>
+                            <div class="explanationContainer">
+                                <p class="explanation">First of all, we made ourselves familiar with the Rijksstudio (website). We created a complete sitemap in order to get an overview of pages, interactions and limitations. Then we formulated research questions to guide us through the process. Following that we created a research set-up which specifically defined the framework and procedure of the testing including the testing protocol. Each of us recruited a participant to use for testing purposes and each of us conducted a usability test with that respective person. For our tests we had both a test lead and an observer. For both parts we made a clear protocol that would ensure the compatibility of our data. The test itself consisted of a handful of tasks which would visualise possible usability issues with the website. Following the test, we planned interviews in order to get more insights and opinions from the participants. In order to combine our data, we created special diagrams, lists and tables fitting the purpose of each research question. This made analysing the data a lot more efficient. We took the combined and interpreted findings to answer our research questions posed in the beginning. Lastly, we wrote recommendations for changes that would be vital for the betterment of the usability of the website.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="otherProjects">
+                    <div class="otherProjectsContainer">
+                        <div class="goBackContainer">
+                            <div class="nextTitle">
+                                <h3 class="anotherProject">PREVIOUS PROJECT</h3>
+                            </div>
+                            <div class="projectNameContainer">
+                                <h4 class="projectName"><a href="project%20two.html">Gift Giving</a></h4>
+                            </div>
+                        </div>
+                        <div class="nextContainer">
+                            <div class="nextTitle">
+                                <h3 class="anotherProject">NEXT PROJECT</h3>
+                            </div>
+                            <div class="projectNameContainer">
+                                <h4 class="projectName"><a href="project%20four.html">Airport - Waiting Time</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--It is unfortunately not possible to work with the <footer> element in my case-->
+            <div class="footerContainer">
+                <div class="copyright">
+                    <p class="copyrightText">made by Julian Kendrick Müller © 2021</p>
+                </div>
+            </div>
+        </section>
+    </body>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JKM Portfolio</title>
+        <link rel="stylesheet" href="CSS/main.css">
+        <link rel="stylesheet" href="Responsive/responsive%20homepage.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+        I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+
+        *although this menu provides navigation, the <nav> element is not applicable here, because it is not meant to stick to the top* 
+        -->
+        <div id="showHide" class="overlayMenu">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="menuLinks">
+                <a href="aboutme.html">ABOUT ME</a>
+                <a href="#content" onclick="closeMenu()">PORTFOLIO</a>
+                <a href="#contact" onclick="closeMenu()">CONTACT</a>
+            </div>
+        </div>
+        <script>
+            function openMenu () {
+                    document.getElementById("showHide").style.height = "100%";
+                }
+                                        
+            function closeMenu () {
+                    document.getElementById("showHide").style.height = "0%";
+                }
+        </script>
+        <!--End-->
+        <div class="navBar">
+            <h2><a href="#content">PORTFOLIO</a></h2>
+            <h2><a href="aboutme.html">ABOUT ME</a></h2>
+            <h2><a href="#contact">CONTACT</a></h2>
+        </div>
+        <div class="containerMain">
+            <div class="title">
+                <h3 class="header1">UX Design</h3>      
+                <h2 class="header2">PORTFOLIO</h2>
+                <h2 class="header3">JKM</h2>
+            </div>
+            <div class="signature">
+                <h1 class="signature">jkm</h1>
+            </div>
+            <div class="contact">
+                <div class="leftBarTop"></div>
+                <div class="contactLinkBox">
+                    <p class="contactLink"><a href="#contact">CONTACT</a></p>
+                </div>
+                <div class="leftBarBottom"></div>
+            </div>
+            <div class="menu">
+                <div class="rightBarTop"></div>
+                <div class="menuBox">
+                    <p class="displayMenu"><span onclick="openMenu()">MENU</span></p>
+                </div>
+                <div class="rightBarBottom"></div>
+            </div>
+        </div>
+        <!--
+        These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        I adjusted the button for my website 
+        -->  
+        <button id="toTopButton" onclick="scrollUp()"><div id="arrow">&#10132;</div></button>
+        <script>
+            ttButton = document.getElementById("toTopButton");
+
+            window.onscroll = function() {checkScrolling()};
+
+            function checkScrolling() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 ttButton.style.display = "block";
+                } else {
+                    ttButton.style.display = "none";
+                }
+            }
+
+            function scrollUp() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!--End-->
+        <section id="content" class="contentContainer">
+            <div class="contentBackground">
+                <header>
+                    <h3 class="portfolioTitle">PORTFOLIO</h3>
+                </header>
+                <section class="portfolio">
+                    <div class="projectContainerMain">
+                        <div class="projectContainer2">
+                            <a href="project%20one.html"><img src="images/wing%20chun%20cover.png" class="thumbnail"></a>
+                            <div class="projectContentRight">
+                                <header>
+                                    <h1 class="projectTitle"><a href="project%20one.html">WING CHUN</a></h1>
+                                </header>
+                                <p class="projectDescription">A detailed research report on the Wing Chun subculture</p>
+                                <p class="projectDescription">Focus: User Research and Empathising</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectContainerMain">
+                        <div class="projectContainer2">
+                            <div class="projectContentLeft">
+                                <header>
+                                    <h1 class="projectTitle"><a href="project%20two.html">GIFT GIVING EXPERIENCE</a></h1>
+                                </header>
+                                <p class="projectDescription">A complete design thinking process on a bespoke gift giving experience</p>
+                                <p class="projectDescription">Focus: UX and Design Thinking</p>
+                            </div>
+                            <a href="project%20two.html"><img src="images/bsp%20cover.png" class="thumbnail"></a>
+                        </div>
+                    </div>
+                    <div class="projectContainerMain">
+                        <div class="projectContainer2">
+                            <a href="project%20three.html"><img src="images/rijksstudio%20cover.png" class="thumbnail"></a>
+                            <div class="projectContentRight">
+                                <header>
+                                  <h1 class="projectTitle"><a href="project%20three.html">RIJKSSTUDIO</a></h1>
+                                </header>
+                                <p class="projectDescription">A user trailing focused on the Rijksstudio website </p>
+                                <p class="projectDescription">Focus: User Testing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projectContainerMain">
+                        <div class="projectContainer2">
+                            <div class="projectContentLeft">
+                                <header>
+                                    <h1 class="projectTitle"><a href="project%20four.html">AIRPORT - WAITING TIME</a></h1>
+                                </header>
+                                <p class="projectDescription">A project about Creativity, Ideation and Visualisation</p>
+                                <p class="projectDescription">Focus: Ideation and Visualisation</p>
+                            </div>
+                            <a href="project%20four.html"><img src="images/storyboard.png" class="thumbnail"></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="aboutMe">
+                    <div class="aboutMeContainerMain">
+                        <div class="aboutMeContainer">
+                            <header>
+                                <h1 class="aboutMeTitle">ABOUT ME</h1>
+                            </header>
+                            <div class="aboutMeTextContainer">
+                                <p class="aboutMeText">Hi! My name is Julian, I’m am 19 years old from Germany. I am currently a first year User Experience Design student at The Hague University of Applied Sciences.
+                                Even before I graduated from high school, I knew I wanted to become a UX Designer.
+                                After a gap year in which I was working and studying Computer Science and Sociology I moved to the Netherlands in order to pursue my dream job as a User Experience Designer.</p>
+                                <p class="aboutMeText">You can learn more about me <a href="aboutme.html">here!</a></p>
+                            </div>
+                        </div>
+                        <div class="aboutMePictureContainer">
+                            <img src="images/pp.png" class="picture"> 
+                        </div>
+                    </div>
+                </section> 
+                <section id="contact" class="connect">
+                    <div class="connectContainerMain">
+                        <div class="connectContainer">
+                            <header>
+                                <h1 class="connectTitle">Let's get to work!</h1>
+                            </header>
+                            <p class="email"><a href="mailto:julianmueller.uxd@gmail.com" target="_blank">julianmueller.uxd@gmail.com</a></p>
+                        </div>
+                        <!--I don't have these social media integrations (yet) but I would like to have them in the future-->
+                        <div class="socialContentContainer">
+                            <div class="socialIconContainer">
+                                <img class="socialIcon" src="Icons/linkedin.png">
+                                <img class="socialIcon" src="Icons/instagram.png">
+                                <img class="socialIcon" src="Icons/Behance.png">
+                                <img class="socialIcon" src="Icons/dribbble.png">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--It is unfortunately not possible to work with the <footer> element in my case-->
+            <div class="footerContainer">
+                <div class="copyright">
+                    <p class="copyrightText">made by Julian Kendrick Müller © 2021</p>
+                </div>
+            </div>
+        </section>
+    </body>

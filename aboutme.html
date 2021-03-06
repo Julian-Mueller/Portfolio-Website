@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>About Me - JKM Portfolio</title>
+        <link rel="stylesheet" href="CSS/aboutme.css">
+        <link rel="stylesheet" href="Responsive/responsive%20aboutme.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+        I adjusted the code for my purpose (e.g., animation from top to bottom; menu links aligned in the middle).
+
+        *although this menu provides navigation, the <nav> element is not applicable here, because it is not meant to stick to the top* 
+        -->
+        <div id="showHide" class="overlayMenu">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="menuLinks">
+                <a href="index.html">HOME</a>
+                <a href="index.html#content" onclick="closeMenu()">PORTFOLIO</a>
+                <a href="#contact" onclick="closeMenu()">CONTACT</a>
+            </div>
+        </div>
+        <script>
+            function openMenu () {
+                    document.getElementById("showHide").style.height = "100%";
+                }
+                                        
+            function closeMenu () {
+                    document.getElementById("showHide").style.height = "0%";
+                }
+        </script>
+        <!--End-->
+        <div class="navBar">
+            <h2><a href="index.html">HOME</a></h2>
+            <h2><a href="index.html#content">PORTFOLIO</a></h2>
+            <h2><a href="#contact">CONTACT</a></h2>
+        </div>
+        <div class="containerMain">
+            <div class="title">
+                <h2 class="header1">About Me</h2>      
+            </div>
+            <div class="menu">
+                <div class="rightBarTop"></div>
+                <div class="menuBox">
+                    <p class="displayMenu"><span onclick="openMenu()">MENU</span></p>
+                </div>
+                <div class="rightBarBottom"></div>
+            </div>
+        </div>
+        <!--
+        These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        I adjusted the button for my website 
+        -->  
+        <button id="toTopButton" onclick="scrollUp()"><div id="arrow">&#10132;</div></button>
+        <script>
+            ttButton = document.getElementById("toTopButton");
+
+            window.onscroll = function() {checkScrolling()};
+
+            function checkScrolling() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 ttButton.style.display = "block";
+                } else {
+                    ttButton.style.display = "none";
+                }
+            }
+
+            function scrollUp() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!--End-->
+        <section class="contentContainer">
+            <div class="contentBackground">
+                <section class="aboutMe">
+                    <div class="aboutMeContainerMain">
+                        <div class="aboutMeContainer">
+                            <div class="aboutMePictureContainer">
+                                <img src="images/pp.png" class="picture"> 
+                            </div>
+                            <header>
+                                <h1 class="aboutMeTitle">HI! I'M JULIAN</h1>
+                            </header>
+                            <div class="aboutMeTextContainer">
+                                <p class="aboutMeText">From a young age on I wanted to do something related to graphic design or media design. 
+                                Later in the final years of high school I started developing interest in Psychology. From then on, I wanted to study psychology because I was really interested in how and why people think and behave. In general, I was also the kind of person who was really investigative and curious on 
+                                how things work. Shortly before graduating from high-school my mom went on a sailing trip. Now, you might ask yourself how this is related either to UX Design and me. Coincidentally, my mother met a woman on the ship who was working as a (*drumroll*) UX Designer. After returning from her journey, my mother told me all about UX Design (I still believe that I would not have never discovered it, if it wasn’t for that trip). I realised that instead of studying plain psychology, that job would combine both my interests in psychology and design. Therefore, I went on searching for an optimal study program related to UX which eventually led me to The Hague University of Applied Sciences. But before I moved to the Netherlands, I took a gap year in which I was working at a supermarket as preparation for the move. Additionally, I was studying computer science and sociology at my local university. Finally, a year later I moved to the Netherlands and started my studies in UX Design in September 2020. Currently I am at the beginning of the second semester.<br>
+                                Outside of studying UX I am very interested in both sports and fitness. I am a major football (soccer) fan and follower of the NBA. I play football and basketball myself and do calisthenics. Other than that, I am very interested in music. I play and played guitar as well as drums from a young age on. With the big band of my school, I played internally and externally infront of mayor audiences.</p>
+                                <p class="aboutMeText">For inquiries or if you just want to chat, feel free to contact me.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider">
+                    <div class="line"></div>
+                </div>
+                <section class="UX">
+                    <div class="uxContainerMain">
+                        <div class="uxContainer">
+                            <div class="aboutMeTextContainer">
+                                <p class="aboutMeText">Although I am currently still at the beginning of my studies, I have already learned about several components and techniques within the stages of the Design Thinking Process: Empathising, Defining, Ideation, Prototyping and Testing. But also about intercultural competence, UX Factors and ethnicity in design. Therefore I am experienced with the common design and protyping tools. Moreover, I developed crucial UX Design skills such as User Research and empathising, information architecture, visualising, coding and protyping. However, I noticed that I found most joy in the empathising and protyping phase of the design process.</p>
+                                <p class="aboutMeText">The techniques I learned are: Design Briefs, Ethnographic Research, Observational Research, Personas, User Portraits, User Flows, Storyboards, User Stories, Sitemaps, Diverging and Converging Techniques, Ideation, Sketching, Wireframes, Mockups, Paper Prototyping, Low-Fidelity Prototyping, High-Fidelity Prototyping, Visualising and User Testing.</p> 
+                                <p class="aboutMeText">I believe that UX Designers have huge responsibility because we have a lot of influence on the every day life of users. But also have the power to manipulate. I, however, aspire to create ethically correct and meaningful design solutions that will benefit users all around the world by having a positive impact on their lives.</p>
+                                <p class="aboutMeText">Studying entirely in English in an international setting will give me an enormous advantage working in a modern, intercultural business environment. But more importantly, it helps me developing as a person.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider">
+                    <div class="line"></div>
+                </div>
+                <section class="educationAndSkills">
+                    <div class="esContainerMain">
+                        <div class="esContainer">
+                            <div class="educationContainer">
+                                <h1 class="edTitle">EDUCATION</h1>
+                                <h1 class="edG">HES - Abitur</h1>
+                                <h1 class="edCS">Uni Bielefeld - Computer Science / Sociology</h1>
+                                <h1 class="edUX">THUAS - UX Design</h1>
+                            </div>
+                            <div class="skillsContainer">
+                                <h1 class="skTitle">SKILLS</h1>
+                                <h2 class="skHeaders">Tools</h2>
+                                <p class="skDescription">Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator, Adobe Premier Pro, Microsoft Office, Processing</p>
+                                <h2 class="skHeaders">UX Skills</h2>
+                                <p class="skDescription">Design Thinking Process, User Research, User Testing, Prototyping, Wireframing</p>
+                                <h2 class="skHeaders">Personal Skills</h2>
+                                <p class="skDescriptionBottom">Creativity, Empathy, Analytical Thinking, Open-Minded, Curiosity, Leadership, Reliability, Work Ethic</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="resume">
+                    <div class="resumeContainer">
+                        <div class="resumeLink"><a href="Resume%20proto.pdf" target="_blank">RESUME</a></div>
+                    </div>
+                </section>
+                <section id="contact" class="connect">
+                    <div class="connectContainerMain">
+                        <div class="connectContainer">
+                            <header>
+                                <h1 class="connectTitle">Let's get to work!</h1>
+                            </header>
+                            <p class="email"><a href="mailto:julianmueller.uxd@gmail.com" target="_blank">julianmueller.uxd@gmail.com</a></p>
+                        </div>
+                        <!--I don't have these social media integrations (yet) but I would like to have them in the future-->
+                        <div class="socialContentContainer">
+                            <div class="socialIconContainer">
+                                <img class="socialIcon" src="Icons/linkedin.png">
+                                <img class="socialIcon" src="Icons/instagram.png">
+                                <img class="socialIcon" src="Icons/Behance.png">
+                                <img class="socialIcon" src="Icons/dribbble.png">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--It is unfortunately not possible to work with the <footer> element in my case-->
+            <div class="footerContainer">
+                <div class="copyright">
+                    <p class="copyrightText">made by Julian Kendrick Müller © 2021</p>
+                </div>
+            </div>
+        </section>
+    </body>

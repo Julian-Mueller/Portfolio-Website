@@ -1,0 +1,660 @@
+/*General*/
+
+body {
+    background-color: #222222;
+}
+
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+@font-face {
+    font-family: Photograph Signature;
+    src: url(Photograph-Signature.woff);
+}
+
+@font-face {
+    font-family: GRIFTER;
+    src: url(GRIFTER.woff);
+}
+
+
+
+
+/*Overlay Menu*/
+
+/*
+These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+*/
+
+.overlayMenu {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: #1D1D1D;
+    opacity: 90%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 0;
+}
+
+.overlayMenu .closeButton {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 50px;
+    color: ghostwhite;
+}
+
+.closeButton:hover {
+    color: coral;
+}
+
+.menuLinks {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.menuLinks a {
+    padding: 0.5%;
+    font-size: 40px;
+    color:  ghostwhite;
+    display: block;
+    font-family: GRIFTER, sans-serif;
+}
+
+.menuLinks a:hover {
+    color: coral;
+}
+
+/*End*/
+
+
+
+
+
+/*Main Section*/
+
+.containerMain {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+
+/*Title*/
+
+.title {
+    grid-column: 6/8;
+    grid-row: 3/5;
+    place-self: center;
+}
+
+.header1 {
+    font-family: GRIFTER, sans-serif;
+    -webkit-text-stroke: 1px white;
+    color: #222222;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.header2 {
+    font-family: GRIFTER, sans-serif;
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    margin: 0%;
+}
+
+.header3 {
+    font-family: GRIFTER, sans-serif;
+    color: #666666;
+    font-weight: bold;
+    font-size: 65px;
+    text-align: center;
+    margin-top: 0%;
+}
+
+
+/*Signature*/
+
+.signature {
+    grid-column: 6/8;
+    grid-row: 6/7;
+    place-self: end center;
+    font-family: Photograph Signature, cursive;
+    color: #6D6D6D;
+    font-size: 80px;
+    margin-top: 0%;
+    margin-bottom: 15%;
+}
+
+
+/*Contact bar on the left side*/
+
+.contact {
+    grid-column: 2;
+    grid-row: 1/7;
+    justify-self: center;
+}
+
+.leftBarTop {
+    height: 53%;
+    background: coral;
+}
+
+.contactLinkBox {
+    height: 31%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+}
+
+.contactLink {
+    font-family: McLaren, sans-serif;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 5px;
+    font-size: 35px;
+    color: ghostwhite;
+    margin: 0%;
+    cursor: pointer;
+}
+
+.contactLink:hover {
+    color: coral;
+}
+
+.leftBarBottom {
+    grid-row: 6/7;
+    height: 16%;
+    background-color: coral;
+}
+
+
+/*Menu bar at the right side*/
+
+.menu {
+    grid-column: 11;
+    grid-row: 1/7;
+    justify-self: center;
+}
+
+.rightBarTop {
+    height: 17%;
+    background: coral;
+}
+
+.menuBox {
+    height: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+
+}
+
+.displayMenu {
+    font-family: McLaren, sans-serif;
+    writing-mode: vertical-rl;
+    letter-spacing: 5px;
+    font-size: 35px;
+    color: ghostwhite;
+    margin: 0%;
+    cursor: pointer;
+}
+
+.displayMenu:hover {
+    color: coral;
+}
+
+.rightBarBottom {
+    grid-row: 6/7;
+    height: 60%;
+    background-color: coral;
+}
+
+
+
+/*Alternative Menu*/
+
+.navBar {
+    display: none;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    background-color: coral;
+    font-family: Avenir, sans-serif;
+    font-weight: bold;
+    color: #222222;
+}
+
+.navBar h2 {
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.navBar h2:hover {
+    color: ghostwhite;
+    cursor: pointer;
+}
+
+
+
+/*Scroll to top button*/
+
+/*
+These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+I adjusted the button for my website 
+*/
+
+#toTopButton {
+    display: none;
+    bottom: 70px;
+    right: 70px;
+    position: fixed;
+    z-index: 2;
+    background-color: coral;
+    border: none;
+    color: aliceblue;
+    padding: 15px;
+    transform: rotate(45deg);
+    opacity: 65%;
+}
+
+#arrow {
+    transform: rotate(-135deg)
+}
+
+#toTopButton:hover {
+    background-color: #EEAD94;
+}
+
+/*End*/
+
+
+
+
+
+/*Content*/
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.contentBackground {
+    grid-column: 2/12;
+        background-color: #222222;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    box-shadow: 1px 15px 70px #000000;
+    margin-top: -2.5rem;
+}
+
+
+/*Portfolio*/
+
+.portfolioTitle {
+    font-family: GRIFTER, sans-serif;
+    font-size: 60px;
+    margin: 7rem;
+    margin-bottom: 3rem;
+    color: ghostwhite;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+/*General*/
+
+.projectContainerMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.projectContainer2 {
+    display: flex;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 540px;
+    height: 295px;
+}
+
+.projectTitle {
+    font-family: Avenir, sans-serif;
+    font-size: 35px;
+    color: ghostwhite;
+    font-weight: heavy;  
+}
+
+.projectTitle:hover {
+    color:coral;
+}
+
+.projectDescription {
+    font-family: Roboto, sans-serif;
+    color: lightgray;
+    font-size: 25px;
+}
+
+.indexDescription {
+    font-family: Roboto, sans-serif;
+    color: lightgray;
+    font-size: 20px;
+    text-align: center;
+    margin: 0.4rem;
+}
+
+
+/*Wing Chun*/
+
+.projectContentRight {
+    width: 540px;
+    height: 295px;
+    margin-left: 2em;
+}
+
+.indexRowRight {
+    display: flex;
+}
+
+.iUserResearch {
+    width: 161px;
+    height: 36px;
+    border: 1px;
+    border-radius: 10px;
+    background-color: #3C3C3C;
+}
+
+.iEmpathising {
+    width: 135px;
+    height: 36px;
+    border: 1px;
+    border-radius: 10px;
+    margin-left: 1rem;
+    background-color: #3C3C3C;
+}
+
+
+/*Gift giving*/
+
+.projectContentLeft {
+    width: 540px;
+    height: 295px;
+    margin-right: 2em;
+    text-align: end;
+}
+
+.indexRowLeft {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iUX {
+    width: 57px;
+    height: 36px;
+/*
+    border: 1px;
+    border-radius: 10px;
+*/
+/*        background-color: #3C3C3C;*/
+}
+
+.iDesignThinking {
+    width: 175px;
+    height: 36px;
+/*
+    border: 1px;
+    border-radius: 10px;
+*/
+    margin-left: 1rem;
+/*    background-color: #3C3C3C;*/
+}
+
+
+/*Rijksstudio*/
+
+.projectContentRight {
+    width: 540px;
+    height: 295px;
+    margin-left: 2em;
+}
+
+.indexRowRight {
+    display: flex;
+}
+
+.iUserTesting {
+    width: 139px;
+    height: 36px;
+/*
+    border: 1px;
+    border-radius: 10px;
+*/
+/*        background-color: #3C3C3C;*/
+}
+
+
+/*Airport*/
+
+.projectContentLeft {
+    width: 540px;
+    height: 295px;
+    margin-right: 2em;
+    text-align: end;
+}
+
+.indexRowLeft {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iIdeation {
+    width: 89px;
+    height: 36px;
+/*
+    border: 1px;
+    border-radius: 10px;
+*/
+/*        background-color: #3C3C3C;*/
+}
+
+.iVisualisation {
+    width: 141px;
+    height: 36px;
+/*
+    border: 1px;
+    border-radius: 10px;
+*/
+    margin-left: 1rem;
+/*    background-color: #3C3C3C;*/
+}
+
+
+
+
+
+/*About Me*/
+
+.aboutMe {
+    display: flex;
+    padding: 3rem;
+    background-color: #383838;
+    margin-top: 3rem;
+}
+
+.aboutMeContainerMain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.aboutMeContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutMeTextContainer {
+    margin-left: 3rem;
+}
+
+.aboutMeTitle {
+    font-family: Avenir, sans-serif;
+    font-size: 45px;
+    color: ghostwhite;
+    font-weight: heavy;
+    margin: 0%;
+    margin-left: 3rem;
+}
+
+.aboutMeText {
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+    color: lightgray;
+}
+
+.aboutMeText a {
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+    color: coral;
+}
+
+.aboutMeText a:hover {
+    color: #EEAD94;
+}
+
+.aboutMePictureContainer {
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.picture {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    float: right;
+    opacity: 85%;
+}
+
+
+
+
+/*Connect*/
+
+.connect {
+    display: flex;
+    padding: 5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    box-shadow: 0px 5px 55px #191919;
+}
+
+.connectContainerMain {
+    width: 100%;
+    display: flex;
+}
+
+.connectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 70%;
+}
+
+.connectTitle {
+    font-family: GRIFTER, sans-serif;
+    font-size: 45px;
+    color: dimgrey;
+    font-weight: heavy;
+    margin: 0%;
+}
+
+.email {
+    font-family: Roboto, sans-serif;
+    font-size: 25px;
+    color: dimgray;
+    margin: 0%;
+    margin-top: 5%;
+}
+
+.email:hover {
+    color: coral;
+}
+
+
+/*Social*/
+
+.socialContentContainer {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socialIconContainer {
+    height: 100%;
+    display: flex;
+    justify-self: flex-end;
+}
+
+/*I don't have these social media integrations (yet) but I would like to have them in the future*/
+
+.socialIcon {
+    margin-right: 1rem;
+    height: 37px;
+    width: 37px;
+}
+
+.socialIcon:hover {
+    background-color: dimgray;
+    cursor: pointer;
+}
+
+
+
+
+/*Footer*/
+
+.footerContainer {
+    grid-column: 2/12;
+    background-color: #222222;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+}
+
+.copyrightText {
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    color: dimgray;
+}

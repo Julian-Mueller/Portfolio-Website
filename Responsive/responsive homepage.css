@@ -1,0 +1,309 @@
+@media all and (min-width: 2000px) {
+    
+    .connectContainer {
+        width: 30%;
+    }
+}
+
+@media all and (max-width: 1800px) {
+    
+    .contactLink {
+        font-size: 25px;
+    }
+    
+    .displayMenu {
+        font-size: 25px;
+    }
+    
+    .header1 {
+        font-size: 45px;
+    }
+    
+    .header2 {
+        font-size: 60px;
+    }
+    
+    .header3 {
+        font-size: 55px;
+    }
+    
+    .signature {
+        font-size: 70px;
+    }
+    
+    .portfolioTitle {
+        font-size: 50px;
+    }
+    
+    .aboutMeTitle {
+        font-size: 35px;
+    }
+    
+    .aboutMeText {
+        font-size: 20px;
+    }
+    
+    .aboutMeText a {
+        font-size: 20px;
+    }
+}
+
+
+@media all and (max-width: 1440px) {
+    
+    .thumbnail {
+        width: 443px;
+        height: 242px;
+    }
+    
+    .projectTitle {
+        font-size: 30px;
+    }
+    
+    .projectDescription {
+        font-size: 20px;
+    }
+    
+    #toTopButton {
+        right: 50px;
+    }
+    
+    .projectContentRight {
+        width: 443px;
+        height: 242px;
+    }
+    
+    .projectContentLeft {
+        width: 443px;
+        height: 242px;
+    }
+    
+    .copyrightText {
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 1400px) {
+    
+    #toTopButton {
+        right: 30px;
+    }
+}
+
+
+@media all and (max-width: 1330px) {
+    
+    .projectContainer2 {
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media all and (max-width: 1269px) {
+    
+    .projectContentLeft {
+        margin-left: 4em;
+        margin-bottom: 2em;
+        text-align: start;
+    }
+    
+    .indexRowLeft {
+        justify-content: flex-start;
+    }
+    
+    .indexDescription {
+        font-size: 15px;
+    }
+    
+    .iUserResearch {
+        width: 115px;
+        height: 28px;
+    }
+    
+    .iEmpathising {
+        width: 100px;
+        height: 28px;
+    }
+    
+    .iUX {
+        width: 35px;
+        height: 28px;
+    }
+    
+    .iDesignThinking {
+        width: 123px;
+        height: 28px;
+    }
+    
+    .iUserTesting {
+        width: 100px;
+        height: 28px;
+    }
+    
+    .iIdeation {
+        width: 69px;
+        height: 28px;
+    }
+    
+    .iVisualisation {
+        width: 105px;
+        height: 28px;
+    }
+}
+
+
+@media all and (max-width: 1100px) {
+    
+    .aboutMeContainerMain {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .picture {
+        margin-top: 10%;
+    }
+    
+    .connectContainerMain {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .connectContainer {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .socialContentContainer {
+        width: 100%;
+        justify-content: center;
+        padding-top: 5%;
+    }
+}
+
+
+@media all and (max-width: 800px) {
+    
+    .navBar {
+        display: flex;
+        position: fixed;
+        justify-content: center;
+        z-index: 5;
+    }
+    
+    .containerMain {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .title {
+        grid-column: 2;
+    }
+    
+    .signature {
+        grid-column: 2;
+    }
+    
+    .contact {
+        display: none;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    .contentContainer {
+        display: block;
+    }
+    
+    .contentBackground {
+        margin-top: -3rem;
+    }
+    
+    .portfolioTitle {
+        width: 100%;
+        margin: 0%;
+        text-align: center;
+        padding-top: 5rem;
+
+    }
+}
+
+
+@media all and (max-width: 700px) {
+    
+    .projectContainerMain {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+@media all and (max-width: 550px) {
+    
+    .navBar h2 {
+        font-size: 16px;
+        margin-top: 1.2em;
+    }
+    
+    #toTopButton {
+        right: 50px;
+    }
+    
+    .projectContainerMain {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    
+    .thumbnail {
+        width: 350px;
+        height: 200px;
+    }
+    
+    .projectContentRight {
+        width: 350px;
+        height: 200px;
+    }
+    
+    .projectContentLeft {
+        width: 350px;
+        height: 200px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    
+    .header1 {
+        font-size: 35px;
+    }
+
+    .header2 {
+        font-size: 50px;
+    }
+
+    .header3 {
+        font-size: 55px;
+    }
+    
+    .portfolioTitle {
+        font-size: 35px;
+    }
+    
+    .thumbnail {
+        width: 270px;
+        height: 150px;
+    }
+    
+    .projectContentRight {
+       width: 270px;
+        height: 170px;
+    }
+    
+    .projectContentLeft {
+        width: 270px;
+        height: 280px;
+    }
+    
+    .email {
+        font-size: 25px;
+        margin-bottom: 1.2em;
+    }
+}

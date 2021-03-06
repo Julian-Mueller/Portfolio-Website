@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gift Giving - JKM Portfolio</title>
+        <link rel="stylesheet" href="CSS/project%20two.css">
+        <link rel="stylesheet" href="Responsive/responsive%20project%20two.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+        I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+
+        *although this menu provides navigation, the <nav> element is not applicable here, because it is not meant to stick to the top* 
+        -->
+        <div id="showHide" class="overlayMenu">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="menuLinks">
+                <a href="index.html">HOME</a>
+                <a href="aboutme.html" onclick="closeMenu()">ABOUT ME</a>
+                <a href="index.html#contact" onclick="closeMenu()">CONTACT</a>
+            </div>
+        </div>
+        <script>
+            function openMenu () {
+                    document.getElementById("showHide").style.height = "100%";
+                }
+                                        
+            function closeMenu () {
+                    document.getElementById("showHide").style.height = "0%";
+                }
+        </script>
+        <!--End-->
+        <div class="navBar">
+            <h2><a href="index.html">HOME</a></h2>
+            <h2><a href="aboutme.html">ABOUT ME</a></h2>
+            <h2><a href="index.html#contact">CONTACT</a></h2>
+        </div>
+        <div class="containerMain">
+            <div class="title">
+                <h2 class="header1">GIFT GIVING EXPERIENCE</h2>      
+            </div>
+            <div class="menu">
+                <div class="rightBarTop"></div>
+                <div class="menuBox">
+                    <p class="displayMenu"><span onclick="openMenu()">MENU</span></p>
+                </div>
+                <div class="rightBarBottom"></div>
+            </div>
+        </div>
+        <!--
+        These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        I adjusted the button for my website 
+        -->  
+        <button id="toTopButton" onclick="scrollUp()"><div id="arrow">&#10132;</div></button>
+        <script>
+            ttButton = document.getElementById("toTopButton");
+
+            window.onscroll = function() {checkScrolling()};
+
+            function checkScrolling() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 ttButton.style.display = "block";
+                } else {
+                    ttButton.style.display = "none";
+                }
+            }
+
+            function scrollUp() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!--End-->
+        <section class="contentContainer">
+            <div class="contentBackground">
+                <section class="overview">
+                    <div class="overviewContainerMain">
+                        <div class="overviewContainer">
+                            <header>
+                                <h1 class="overviewHeader">OVERVIEW</h1>
+                            </header>
+                            <div class="overviewContentContainer">
+                                <div class="index">
+                                    <h4 class="indexHeader">FIELD</h4>
+                                    <h5 class="indexDescription">UX</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TYPE</h4>
+                                    <h5 class="indexDescription">School Project</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TEAM</h4>
+                                    <h5 class="indexDescription">Duo</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">DURATION</h4>
+                                    <h5 class="indexDescription">2 Months</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="desciption">
+                    <div class="descriptionContainerMain">
+                        <div class="descriptionContainer">
+                            <p class="descriptionText">A complete design thinking process on a bespoke gift giving experience. International students are often separated from their family and friends over a long distance. Therefore, the special occasion of receiving an impactful gift from friends or family would strengthen the connection between each other. How could you design a personalised and impactful gift giving experience, enhancing and accompanying the gift?
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider">
+                    <div class="line"></div>
+                </div>
+                <!--
+                These lines of code below are for the slideshow to display pictures and screenshots from the project, the original code of the slideshow is from https://www.w3schools.com/howto/howto_js_slideshow.asp
+                It was very difficult to implement this slideshow into my website and I took me a long time understanding the JS code. I adjusted the slideshow to my liking and fixed the image scaling. 
+                -->  
+                <section class="projectPictures">
+                    <div class="picturesContainerMain">
+                        <div class="picContainer">
+                            <div class="slides">
+                                <img src="images/gift%20giving%20experience.png" style="width: 100%">
+                                <div class="imgDescription">Mind map with first assumptions</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/transcriptBSP.png" style="width: 100%">
+                                <div class="imgDescription">Rudimentary Transcript - Ethnographic Interview</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/diagramBSP.png" style="width: 100%">
+                                <div class="imgDescription">Data Overview</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/insightsBSP.png" style="width: 100%">
+                                <div class="imgDescription">Insights</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/portraitBSP.png" style="width: 100%">
+                                <div class="imgDescription">User Portrait
+                                </div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/personaBSP.png" style="width: 100%">
+                                <div class="imgDescription">Persona</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/concept.png" style="width: 100%">
+                                <div class="imgDescription">Concept</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/draft%20prototype.png" style="width: 100%">
+                                <div class="imgDescription">First Draft</div>
+                            </div>     
+                            <div class="slides">
+                                <img src="images/final%20prototype.png" style="width: 100%">
+                                <div class="imgDescription">Final prototype</div>
+                            </div>   
+                            <div class="slides">
+                                <img src="images/exerpt%20prototype.png" style="width: 100%">
+                                <div class="imgDescription">Exerpt 1</div>
+                            </div>   
+                            <div class="slides">
+                                <img src="images/expert%20prototype%202.png" style="width: 100%">
+                                <div class="imgDescription">Exerpt 2</div>
+                            </div>      
+                            <a class="previous" onclick="nSlide(-1)">&#8592;</a>
+                            <a class="next {" onclick="nSlide(1)">&#8594;</a>
+                        </div>
+                    </div>
+                <script>
+                    var index = 1;
+                    show(index);
+                    
+                    function nSlide(n) {
+                        show(index += n);
+                    }
+                    
+                    function show(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("slides");
+                        
+                        if (n > slides.length) {
+                            index = 1
+                        }
+                        if (n < 1) {
+                            index = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slides[index-1].style.display = "block";
+                    }
+                </script>
+                </section>
+                <!--End-->
+                <section class="details">
+                    <div class="detailContainerMain">
+                        <div class="detailContainer">
+                            <div class="timelineContainer">
+                                <div class="timeline"></div>
+                                <div class="timelineDescriptionContainer">
+                                    <h5 class="indicationTop">User Research</h5>
+                                    <h5 class="indication">Defining Insights</h5>
+                                    <h5 class="indication">Sinterklaas</h5>
+                                    <h5 class="indication">Design Vision</h5>
+                                    <h5 class="indication">Persona</h5>
+                                    <h5 class="indication">Final Design Vision</h5>
+                                    <h5 class="indication">Ideation</h5>
+                                    <h5 class="indication">Prototyping</h5>
+                                    <h5 class="indication">Testing</h5>
+                                    <h5 class="indication">Presentation</h5>
+                                </div>
+                            </div>
+                            <div class="explanationContainer">
+                                <p class="explanation">The project was entirely about designing the experience which consisted of a physical token and the digital unwrapping experience of an intangible gift. The project was divided in two parts. The first half focused on empathising and defining. The second half covered the ideation, prototype and testing phase. We began by individually conducting ethnographic research on predetermined users. I used several research techniques to gain insights in the interests needs, values and goals of my user. Moreover, I conducted interviews to gain insights in the usual / past gift giving experiences. In the next step organised my data into clusters to identify connections. I analysed my findings and pinpointed the most relevant insights. This stage was set around the dutch Sinterklaas. We used this to make surprises for our users based on the insights we gathered. Therefore, we could translate our insights into the gift and unwrapping experience and put our knowledge and findings to the test. Similar to the ultimate assignment the actual wrapping of the gift was more important than the gift in itself. After the intermission/test of the ‘sint’ I went on creating a user portrait. Lastly, I defined a design vision for the gift giving experience for my user. This concluded the first part of the process. Together with my design team partner we combined both our data into a fitting persona that would be the foundation for our final gift giving experience. We formulated a design vision that would guide us through the ideation and prototyping phase. From the design vision we formulated HMW questions. I used several creative techniques in order to diverge and create a lot of ideas in order to answer the problems and needs the HMW posed. After sketching a range of ideas, I combined multiple ideas into several gift giving experience concepts. I converge these concepts into three draft concepts which I compared with my design team partner. We combined both our ideas into three final draft concepts. Additionally, we worked out and implemented dramatic arcs for each. Following that we evaluated our concepts and picked one of them to be our final concept to improve on and execute. Before we began digitally prototyping, we individually created paper prototypes to test and evaluate the interaction quality of our concepts. By again first combining the ideas of our paper prototypes we went on individually creating the first drafts of our digital draft prototypes in AdobeXD. Based on both our prototypes we combined them into a whole new iteration of the digital unwrapping. To improve our final prototype, we conducted user tests to help us identify flaws as well as strengths. We merged out flaws accordingly and prepared for the final stage. We concluded the project with a presentation of our work at a digital expo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="otherProjects">
+                    <div class="otherProjectsContainer">
+                        <div class="goBackContainer">
+                            <div class="nextTitle">
+                                <h3 class="anotherProject">PREVIOUS PROJECT</h3>
+                            </div>
+                            <div class="projectNameContainer">
+                                <h4 class="projectName"><a href="project%20one.html">Wing Chun</a></h4>
+                            </div>
+                        </div>
+                        <div class="nextContainer">
+                            <div class="nextTitle">
+                                <h3 class="anotherProject">NEXT PROJECT</h3>
+                            </div>
+                            <div class="projectNameContainer">
+                                <h4 class="projectName"><a href="project%20three.html">Rijksstudio</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--It is unfortunately not possible to work with the <footer> element in my case-->
+            <div class="footerContainer">
+                <div class="copyright">
+                    <p class="copyrightText">made by Julian Kendrick Müller © 2021</p>
+                </div>
+            </div>
+        </section>
+    </body>

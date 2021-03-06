@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wing Chun - JKM Portfolio</title>
+        <link rel="stylesheet" href="CSS/project%20one.css">
+        <link rel="stylesheet" href="Responsive/responsive%20project%20one.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+        I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+
+        *although this menu provides navigation, the <nav> element is not applicable here, because it is not meant to stick to the top* 
+        -->
+        <div id="showHide" class="overlayMenu">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="menuLinks">
+                <a href="index.html">HOME</a>
+                <a href="aboutme.html" onclick="closeMenu()">ABOUT ME</a>
+                <a href="index.html#contact" onclick="closeMenu()">CONTACT</a>
+            </div>
+        </div>
+        <script>
+            function openMenu () {
+                    document.getElementById("showHide").style.height = "100%";
+                }
+                                        
+            function closeMenu () {
+                    document.getElementById("showHide").style.height = "0%";
+                }
+        </script>
+        <!--End-->
+        <div class="navBar">
+            <h2><a href="index.html">HOME</a></h2>
+            <h2><a href="aboutme.html">ABOUT ME</a></h2>
+            <h2><a href="index.html#contact">CONTACT</a></h2>
+        </div>
+        <div class="containerMain">
+            <div class="title">
+                <h2 class="header1">WING CHUN</h2>      
+            </div>
+            <div class="menu">
+                <div class="rightBarTop"></div>
+                <div class="menuBox">
+                    <p class="displayMenu"><span onclick="openMenu()">MENU</span></p>
+                </div>
+                <div class="rightBarBottom"></div>
+            </div>
+        </div>
+        <!--
+        These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        I adjusted the button for my website 
+        -->  
+        <button id="toTopButton" onclick="scrollUp()"><div id="arrow">&#10132;</div></button>
+        <script>
+            ttButton = document.getElementById("toTopButton");
+
+            window.onscroll = function() {checkScrolling()};
+
+            function checkScrolling() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 ttButton.style.display = "block";
+                } else {
+                    ttButton.style.display = "none";
+                }
+            }
+
+            function scrollUp() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!--End-->
+        <section class="contentContainer">
+            <div class="contentBackground">
+                <section class="overview">
+                    <div class="overviewContainerMain">
+                        <div class="overviewContainer">
+                            <header>
+                                <h1 class="overviewHeader">OVERVIEW</h1>
+                            </header>
+                            <div class="overviewContentContainer">
+                                <div class="index">
+                                    <h4 class="indexHeader">FIELD</h4>
+                                    <h5 class="indexDescription">Ethnographic Research</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TYPE</h4>
+                                    <h5 class="indexDescription">School Project</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TEAM</h4>
+                                    <h5 class="indexDescription">Solo</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">DURATION</h4>
+                                    <h5 class="indexDescription">6 Weeks</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="desciption">
+                    <div class="descriptionContainerMain">
+                        <div class="descriptionContainer">
+                            <p class="descriptionText">A detailed research report on Wing Chun Sifus. This Project was part of an introductory course called Research for Design. Throughout 6 weeks I met with many different people of the respective subculture. I conducted research on Wing Chun blackbelts with insightful results, translated into relevant user needs and insights.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider">
+                    <div class="line"></div>
+                </div>
+                <!--
+                These lines of code below are for the slideshow to display pictures and screenshots from the project, the original code of the slideshow is from https://www.w3schools.com/howto/howto_js_slideshow.asp
+                It was very difficult to implement this slideshow into my website and I took me a long time understanding the JS code. I adjusted the slideshow to my liking and fixed the image scaling. 
+                -->  
+                <section class="projectPictures">
+                    <div class="picturesContainerMain">
+                        <div class="picContainer">
+                            <div class="slides">
+                                <img src="images/wing%20chun%20cover.png" style="width: 100%">
+                                <div class="imgDescription">Cover</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/transcript1.png" style="width: 100%">
+                                <div class="imgDescription">Transcript - Semi-structured Interview</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/transcript2.png" style="width: 100%">
+                                <div class="imgDescription">Rudimentary Transcript - Ethnographic Interview</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/datacard.png" style="width: 100%">
+                                <div class="imgDescription">Datacard</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/affinity.png" style="width: 100%">
+                                <div class="imgDescription">Affinity Diagram</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/insights.png" style="width: 100%">
+                                <div class="imgDescription">Insights</div>
+                            </div>
+                               <div class="slides">
+                                <img src="images/hmw.png" style="width: 100%">
+                                <div class="imgDescription">HMW questions + Sketches</div>
+                            </div>
+                            <a class="previous" onclick="nSlide(-1)">&#8592;</a>
+                            <a class="next {" onclick="nSlide(1)">&#8594;</a>
+                        </div>
+                    </div>
+                <script>
+                    var index = 1;
+                    show(index);
+                    
+                    function nSlide(n) {
+                        show(index += n);
+                    }
+                    
+                    function show(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("slides");
+                        
+                        if (n > slides.length) {
+                            index = 1
+                        }
+                        if (n < 1) {
+                            index = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slides[index-1].style.display = "block";
+                    }
+                </script>
+                </section>
+                <!--End-->
+                <section class="details">
+                    <div class="detailContainerMain">
+                        <div class="detailContainer">
+                            <div class="timelineContainer">
+                                <div class="timeline"></div>
+                                <div class="timelineDescriptionContainer">
+                                    <h5 class="indicationTop">Selecting subculture</h5>
+                                    <h5 class="indication">Preparation - Desk research</h5>
+                                    <h5 class="indication">Observation</h5>
+                                    <h5 class="indication">Semi-structured Interview</h5>
+                                    <h5 class="indication">Ethnographic Interview</h5>
+                                    <h5 class="indication">Organising Data</h5>
+                                    <h5 class="indication">Defining Insights</h5>
+                                    <h5 class="indication">Design Vision</h5>
+                                </div>
+                            </div>
+                            <div class="explanationContainer">
+                                <p class="explanation">I was tasked to conduct research on a specific subculture (in my case Wing Chun Sifus). After starting with desk research and formulating curiosities I created research questions that would guide me through the process. The first research technique I used was observation. I contacted the owner of a local Wing Chun school and arranged a trial lesson where I could observe and participate. Although I had just arrived in The Hague and was unfamiliar with my surroundings, I managed to arrange two interviews with Wing Chun Sifus. Both interviews were very insightful and extensive. The second interview I conducted was 5h long in total. I was able to really emphasise, concentrate and ask the right questions even over such a long time. 
+                                From the recordings I transcribed both interviews and made affinity diagrams combining the findings. I used the diagram to identify clusters and connections. Then I translated the data gathered into relative insights. Lastly, I used these insights to formulate HMW questions which I translated into design directions. This concluded the first part of the course.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="otherProjects">
+                    <div class="otherProjectsContainer">
+                        <div class="goBack">
+                        </div>
+                        <div class="nextContainer">
+                            <div class="nextTitle">
+                                <h3 class="nextProject">NEXT PROJECT</h3>
+                            </div>
+                            <div class="projectNameContainer">
+                                <h4 class="projectName"><a href="project%20two.html">Gift giving experience</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--It is unfortunately not possible to work with the <footer> element in my case-->
+            <div class="footerContainer">
+                <div class="copyright">
+                    <p class="copyrightText">made by Julian Kendrick Müller © 2021</p>
+                </div>
+            </div>
+        </section>
+    </body>

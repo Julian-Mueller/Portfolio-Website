@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Airport - JKM Portfolio</title>
+        <link rel="stylesheet" href="CSS/project%20four.css">
+        <link rel="stylesheet" href="Responsive/responsive%20project%20four.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--
+        These lines of code below are for the overlay menu. The original code of the menu is from https://www.w3schools.com/howto/howto_js_sidenav.asp (specifically "Sidenav Full-width")
+        I adjusted the code for my purpose (e.g., animation from top to bottom and reversed; menu links aligned in the middle)
+
+        *although this menu provides navigation, the <nav> element is not applicable here, because it is not meant to stick to the top* 
+        -->
+        <div id="showHide" class="overlayMenu">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+            <div class="menuLinks">
+                <a href="index.html">HOME</a>
+                <a href="aboutme.html" onclick="closeMenu()">ABOUT ME</a>
+                <a href="index.html#contact" onclick="closeMenu()">CONTACT</a>
+            </div>
+        </div>
+        <script>
+            function openMenu () {
+                    document.getElementById("showHide").style.height = "100%";
+                }
+                                        
+            function closeMenu () {
+                    document.getElementById("showHide").style.height = "0%";
+                }
+        </script>
+        <!--End-->
+        <div class="navBar">
+            <h2><a href="index.html">HOME</a></h2>
+            <h2><a href="aboutme.html">ABOUT ME</a></h2>
+            <h2><a href="index.html#contact">CONTACT</a></h2>
+        </div>
+        <div class="containerMain">
+            <div class="title">
+                <h2 class="header1">AIRPORT - WAITING TIME</h2>      
+            </div>
+            <div class="menu">
+                <div class="rightBarTop"></div>
+                <div class="menuBox">
+                    <p class="displayMenu"><span onclick="openMenu()">MENU</span></p>
+                </div>
+                <div class="rightBarBottom"></div>
+            </div>
+        </div>
+        <!--
+        These lines of code below are for the button on the right had side that lets you scroll to top automatically, the original code of the button is from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        I adjusted the button for my website 
+        -->  
+        <button id="toTopButton" onclick="scrollUp()"><div id="arrow">&#10132;</div></button>
+        <script>
+            ttButton = document.getElementById("toTopButton");
+
+            window.onscroll = function() {checkScrolling()};
+
+            function checkScrolling() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 ttButton.style.display = "block";
+                } else {
+                    ttButton.style.display = "none";
+                }
+            }
+
+            function scrollUp() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!--End-->
+        <section class="contentContainer">
+            <div class="contentBackground">
+                <section class="overview">
+                    <div class="overviewContainerMain">
+                        <div class="overviewContainer">
+                            <header>
+                                <h1 class="overviewHeader">OVERVIEW</h1>
+                            </header>
+                            <div class="overviewContentContainer">
+                                <div class="index">
+                                    <h4 class="indexHeader">FIELD</h4>
+                                    <h5 class="indexDescription">Design</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TYPE</h4>
+                                    <h5 class="indexDescription">School Project</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">TEAM</h4>
+                                    <h5 class="indexDescription">Solo / Quartet</h5>
+                                </div>
+                                <div class="index">
+                                    <h4 class="indexHeader">DURATION</h4>
+                                    <h5 class="indexDescription">8 weeks</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="desciption">
+                    <div class="descriptionContainerMain">
+                        <div class="descriptionContainer">
+                            <p class="descriptionText">A project about Creativity, Ideation and Visualisation. Waiting at an airport can be exhausting and frustrating. So, how can we spice up waiting time during your wait?
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider">
+                    <div class="line"></div>
+                </div>
+                <!--
+                These lines of code below are for the slideshow to display pictures and screenshots from the project, the original code of the slideshow is from https://www.w3schools.com/howto/howto_js_slideshow.asp
+                It was very difficult to implement this slideshow into my website and I took me a long time understanding the JS code. I adjusted the slideshow to my liking and fixed the image scaling. 
+                -->  
+                <section class="projectPictures">
+                    <div class="picturesContainerMain">
+                        <div class="picContainer">
+                            <div class="slides">
+                                <img src="images/cover.png" style="width: 100%">
+                                <div class="imgDescription">Portfolio Cover</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/first%20idea.png" style="width: 100%">
+                                <div class="imgDescription">Sketch of a first idea</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/worddance.png" style="width: 100%">
+                                <div class="imgDescription">Word dance</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/brainstorm%20copy.png" style="width: 100%">
+                                <div class="imgDescription">Brainstorming</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/highlighting.png" style="width: 100%">
+                                <div class="imgDescription">Cluster</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/activity.png" style="width: 100%">
+                                <div class="imgDescription">Idea</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/international.png" style="width: 100%">
+                                <div class="imgDescription">Idea</div>
+                            </div>
+                            <div class="slides">
+                                <img src="images/gig.png" style="width: 100%">
+                                <div class="imgDescription">Idea</div>
+                            </div>     
+                            <div class="slides">
+                                <img src="images/matrix.png" style="width: 100%">
+                                <div class="imgDescription">Matrix</div>
+                            </div>   
+                            <div class="slides">
+                                <img src="images/exaggerated.png" style="width: 100%">
+                                <div class="imgDescription">Exaggerated Idea</div>
+                            </div>   
+                            <div class="slides">
+                                <img src="images/storyboard.png" style="width: 100%">
+                                <div class="imgDescription">Storyboard</div>
+                            </div>      
+                            <a class="previous" onclick="nSlide(-1)">&#8592;</a>
+                            <a class="next {" onclick="nSlide(1)">&#8594;</a>
+                        </div>
+                    </div>
+                <script>
+                    var index = 1;
+                    show(index);
+                    
+                    function nSlide(n) {
+                        show(index += n);
+                    }
+                    
+                    function show(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("slides");
+                        
+                        if (n > slides.length) {
+                            index = 1
+                        }
+                        if (n < 1) {
+                            index = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slides[index-1].style.display = "block";
+                    }
+                </script>
+                </section>
+                <!--End-->
+                <section class="details">
+                    <div class="detailContainerMain">
+                        <div class="detailContainer">
+                            <div class="timelineContainer">
+                                <div class="timeline"></div>
+                                <div class="timelineDescriptionContainer">
+                                    <h5 class="indicationTop">Cover</h5>
+                                    <h5 class="indication">CV</h5>
+                                    <h5 class="indication">Sinterklaas</h5>
+                                    <h5 class="indication">First Ideas</h5>
+                                    <h5 class="indication">HMW</h5>
+                                    <h5 class="indication">Brainstorm</h5>
+                                    <h5 class="indication">Ideation</h5>
+                                    <h5 class="indication">Coverging</h5>
+                                    <h5 class="indication">Iterating</h5>
+                                    <h5 class="indication">Storyboard</h5>
+                                </div>
+                            </div>
+                            <div class="explanationContainer">
+                                <p class="explanation">We started this project off by expressing ourselves and designing a personalised cover for the portfolio as making a logo for the course next year. Moreover, we created a sketched CV for ourselves as an introduction to visualising ideas. The initial problem to solve was “How might we spice up waiting time at an airport?”. Therefore, I sketched my first idea of a multifunctional app on an A3. Following the initial brainstorming, we got together in groups of four to come up with our own HMW question by applying a word dance on the original question. After converging to a final HMW question we tried brainstorm as many ideas as possible in order to solve the problem. We then converged again and defined the best ideas and categorized them in different clusters. In order to answer the final HMW question I took inspiration from the ideas we came up with and created my own 5 solutions. I then used an evaluation matrix to evaluate the most fitting idea of the bunch. I used a technique from Roger von Oech’s Whack Pack cards (exaggerating) in order to improve the idea even more. Lastly I created a storyboard resembling the User Experience of visiting the ‘International Street Food Market’.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="otherProjects">
+                    <div class="otherProjectsContainer">
+                        <div class="goBackContainer">
+                            <div class="nextTitle">
+                                <h3 class="anotherProject">PREVIOUS PROJECT</h3>
+                            </div>
+                            <div class="projectNameContainer">
+                                <h4 class="projectName"><a href="project%20three.html">Rijksstudio</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--It is unfortunately not possible to work with the <footer> element in my case-->
+            <div class="footerContainer">
+                <div class="copyright">
+                    <p class="copyrightText">made by Julian Kendrick Müller © 2021</p>
+                </div>
+            </div>
+        </section>
+    </body>
